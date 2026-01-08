@@ -201,28 +201,33 @@ const Index = () => {
                 />
               </div>
               <div className="fade-in-up">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-                  Экспертиза New Swim School
+                <div className="inline-block px-4 py-2 bg-accent/20 rounded-full mb-6">
+                  <span className="text-accent font-semibold">Автор курса</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                  Алина Шаталова
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Мы обучаем тренеров и работаем с детьми более 12 лет. Наша методика одобрена педиатрами и базируется на физиологии младенцев.
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed italic">
+                  Прошла путь от мамы, которая не знала как купать правильно своего ребёнка, до тренера и автора одной из самых востребованных методик в мире грудничкового плавания.
                 </p>
-                <p className="text-xl font-semibold text-foreground mb-8 leading-relaxed">
-                  Мы исключаем травматичные техники — только бережный подход, доказавший свою эффективность на тысячах малышей.
-                </p>
-                <div className="space-y-4">
+                <div className="space-y-6 mb-8">
                   {[
-                    "Более 2000 семей прошли обучение",
-                    "Сертификация международной ассоциации Birthlight",
-                    "Авторская методика адаптивного купания",
-                    "Одобрено ведущими педиатрами России"
+                    "Соучредитель, руководитель и методист практикующий тренер центра разумного плавания для детей «ПЛЮХбург»",
+                    "Автор методики по грудничковому плаванию «Осознанное погружение». Коллеги называют Алину «Че Гевара грудничкового плавания», потому что ее методика совершила настоящую революцию в мире раннего плавания",
+                    "Спикер и презентор международных семинаров и конференций по грудничковому и раннему плаванию",
+                    "Тысячи коллег и детей обучились и обучаются у Алины искусству грудничкового плавания. География учеников-коллег Алины обширна, а детки подопечные в прямом и переносном смысле выросли у неё на руках"
                   ].map((achievement, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <Icon name="Award" size={24} className="text-accent flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                      <span className="text-foreground text-lg">{achievement}</span>
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 rounded-full bg-accent"></div>
+                      </div>
+                      <p className="text-foreground leading-relaxed">{achievement}</p>
                     </div>
                   ))}
                 </div>
+                <p className="text-xl font-semibold text-foreground italic">
+                  Окунитесь в мир осознанного плавания с Алиной!
+                </p>
               </div>
             </div>
           </div>
