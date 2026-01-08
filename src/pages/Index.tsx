@@ -254,6 +254,74 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20 fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Отзывы родителей
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Более 2000 семей уже прошли курс и изменили свой подход к купанию
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  name: "Изабелла Баторина",
+                  role: "Мама и инструктор",
+                  text: "Спасибо большое за ваш курс, это колоссальная работа собрать столько информации воедино! Браво! Помимо плавания, курс охватывает темы по уходу, развитию, ГВ, режиму. Этот курс нужно рекламировать в роддомах и поликлиниках!",
+                  instagram: "@izabellabatorina"
+                },
+                {
+                  name: "Корзухина Анна",
+                  role: "Мама Алисы",
+                  text: "Помимо плавания, купания и занятий в воде, я получила еще столько знаний о развитии и здоровье малыша! Курс превзошел все мои ожидания. Теперь купание — это наше любимое время дня.",
+                  instagram: ""
+                },
+                {
+                  name: "Мария Соколова",
+                  role: "Мама двоих детей",
+                  text: "После курса я перестала бояться купать ребенка. Алина так подробно все объясняет, что чувствуешь уверенность в каждом движении. Малыш теперь обожает воду и спит гораздо крепче!",
+                  instagram: ""
+                },
+                {
+                  name: "Екатерина Волкова",
+                  role: "Будущая мама",
+                  text: "Прошла курс еще до родов — это лучшая подготовка! Когда родился малыш, я уже точно знала, что делать. Никакой паники, только удовольствие от процесса. Рекомендую всем беременным!",
+                  instagram: ""
+                }
+              ].map((testimonial, idx) => (
+                <Card key={idx} className="p-8 bg-card border-border hover:shadow-lg transition-all fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="User" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground">{testimonial.name}</h3>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      {testimonial.instagram && (
+                        <p className="text-sm text-accent mt-1">{testimonial.instagram}</p>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex gap-1 mt-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Icon key={star} name="Star" size={16} className="text-accent fill-accent" />
+                    ))}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
