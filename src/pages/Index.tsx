@@ -433,6 +433,10 @@ const Index = () => {
                 {
                   question: "Есть ли поддержка после покупки?",
                   answer: "В тарифе Премиум вы получаете персональную поддержку тренера в течение недели и разбор вашей техники по видео."
+                },
+                {
+                  question: "Если не пришёл доступ, что делать?",
+                  answer: "Пишите в службу о заботе клиентов на info@newswimschool.ru — мы оперативно решим любой технический вопрос."
                 }
               ].map((faq, idx) => (
                 <AccordionItem key={idx} value={`faq-${idx}`} className="border border-border rounded-lg px-6 bg-card">
