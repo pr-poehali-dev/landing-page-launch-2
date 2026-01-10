@@ -12,30 +12,30 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Split Layout */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-20">
-        <div className="container mx-auto px-6">
+      <section className="relative min-h-screen flex items-center overflow-hidden py-20 bg-gradient-to-br from-background via-background to-accent/5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(197,160,101,0.08),transparent_50%)]" />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="z-10 fade-in-up">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-foreground">
-                Купание и уход<br />ЗА НОВОРОЖДЕННЫМ
-              </h1>
-              <p className="text-2xl md:text-3xl mb-10 font-light text-muted-foreground leading-relaxed">
-                4 способа купания без слез и боли в спине с максимальной пользой для развития ребенка
-              </p>
-              <div className="space-y-4">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white px-12 h-14 text-lg rounded-md w-full md:w-auto"
-                >
-                  Получить доступ
-                </Button>
-                <p className="text-muted-foreground">
-                  старт сразу после оплаты
-                </p>
+              <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+                <span className="text-accent font-semibold text-sm tracking-wider uppercase">Premium Методика</span>
               </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] text-foreground">
+                Домашнее купание: превратите рутину в <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/70">SPA-ритуал</span> для здоровья вашего малыша
+              </h1>
+              <p className="text-lg md:text-xl mb-10 font-light text-muted-foreground leading-relaxed">
+                Авторская методика New Swim School. Мы научим вас не просто купать, а развивать ребенка через воду, укрепляя его иммунитет и нервную систему с первых дней жизни.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-12 h-16 text-lg rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30"
+              >
+                Получить доступ к курсу
+              </Button>
             </div>
             <div className="fade-in-up relative">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-2xl opacity-50" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/10">
                 <img 
                   src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/eb2b5335-af27-4996-a5c2-0995ea9019dc.jpg"
                   alt="Мама с малышом в воде"
@@ -74,8 +74,8 @@ const Index = () => {
                 description: "Как организовать процесс, чтобы спина не уставала, а родители получали удовольствие от контакта?"
               }
             ].map((problem, idx) => (
-              <div key={idx} className="text-center fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+              <div key={idx} className="text-center fade-in-up group" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 group-hover:border-accent/40 transition-all group-hover:scale-110">
                   <Icon name={problem.icon} size={48} className="text-accent" strokeWidth={1} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">{problem.title}</h3>
@@ -97,12 +97,15 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="fade-in-up order-2 md:order-1">
-                <img 
-                  src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/eb2b5335-af27-4996-a5c2-0995ea9019dc.jpg"
-                  alt="Ребенок в воде"
-                  className="rounded-lg shadow-2xl w-full"
-                />
+              <div className="fade-in-up order-2 md:order-1 relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl blur-2xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/eb2b5335-af27-4996-a5c2-0995ea9019dc.jpg"
+                    alt="Ребенок в воде"
+                    className="w-full"
+                  />
+                </div>
               </div>
               <div className="fade-in-up order-1 md:order-2">
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
@@ -129,8 +132,8 @@ const Index = () => {
                       description: "Тактильный контакт «кожа к коже» формирует базовое доверие к миру и родителям."
                     }
                   ].map((value, idx) => (
-                    <div key={idx} className="flex gap-5">
-                      <div className="flex-shrink-0">
+                    <div key={idx} className="flex gap-5 group">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20 group-hover:border-accent/40 transition-all">
                         <Icon name={value.icon} size={28} className="text-accent" strokeWidth={1.5} />
                       </div>
                       <div>
@@ -146,60 +149,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* For Whom Section */}
-      <section id="for-whom" className="py-32 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-20 fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Для кого этот курс?
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {[
-                {
-                  icon: "Baby",
-                  title: "Будущие родители",
-                  description: "Подготовьтесь к встрече с малышом и изучите все нюансы купания заранее"
-                },
-                {
-                  icon: "Users",
-                  title: "Молодые родители",
-                  description: "Освойте безопасные техники купания с первых дней жизни ребенка"
-                },
-                {
-                  icon: "Heart",
-                  title: "Семьи с малышами до 6 месяцев",
-                  description: "Превратите купание в развивающую процедуру для здоровья малыша"
-                },
-                {
-                  icon: "UserCheck",
-                  title: "Бабушки и дедушки",
-                  description: "Обновите знания и освойте современные методики ухода за новорожденными"
-                }
-              ].map((item, idx) => (
-                <Card key={idx} className="p-8 hover:shadow-lg transition-all">
-                  <div className="flex items-start gap-4">
-                    <Icon name={item.icon} size={32} className="text-accent flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Program / Syllabus */}
-      <section id="program" className="py-32 bg-muted/30">
+      <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Программа курса
+                Содержание уроков
               </h2>
             </div>
 
@@ -265,22 +221,25 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="fade-in-up">
-                <img 
-                  src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/a016cb48-2de6-4e79-aeee-9c2a29ac8317.jpg" 
-                  alt="Эксперт New Swim School"
-                  className="rounded-lg shadow-2xl w-full"
-                />
+              <div className="fade-in-up relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-2xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/a016cb48-2de6-4e79-aeee-9c2a29ac8317.jpg" 
+                    alt="Эксперт New Swim School"
+                    className="w-full"
+                  />
+                </div>
               </div>
               <div className="fade-in-up">
-                <div className="inline-block px-4 py-2 bg-accent/20 rounded-full mb-6">
-                  <span className="text-accent font-semibold">Автор курса</span>
+                <div className="inline-block px-5 py-2.5 bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 rounded-full mb-6">
+                  <span className="text-accent font-semibold tracking-wide">Автор курса</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                   Алина Шаталова
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed italic">
-                  Сама прошла этот курс как мама, которая не знала как купать правильно своего ребёнка. Сегодня — тренер и автор одной из самых востребованных методик в мире грудничкового плавания.
+                  Прошла путь от мамы, которая не знала как купать правильно своего ребёнка, до тренера и автора одной из самых востребованных методик в мире грудничкового плавания.
                 </p>
                 <div className="space-y-6 mb-8">
                   {[
@@ -375,23 +334,24 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-32 bg-muted/30">
+      <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Выбрать тариф
+                Выберите формат обучения
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Basic Plan */}
-              <Card className="p-12 bg-card border-border hover:shadow-xl transition-all fade-in-up">
-                <div className="text-center mb-8">
+              <Card className="p-12 bg-card border-border hover:shadow-xl hover:border-accent/20 transition-all fade-in-up relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/5 to-transparent rounded-bl-full" />
+                <div className="text-center mb-8 relative z-10">
                   <h3 className="text-3xl font-bold mb-4 text-foreground">Базовый</h3>
                   <p className="text-muted-foreground mb-8">Идеально для самостоятельного изучения</p>
                   <div className="mb-8">
-                    <span className="text-5xl font-bold text-foreground">1 490 ₽</span>
+                    <span className="text-6xl font-bold bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">1 490 ₽</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-10">
@@ -416,17 +376,18 @@ const Index = () => {
               </Card>
 
               {/* Premium Plan */}
-              <Card className="p-12 bg-card border-2 border-accent hover:shadow-2xl transition-all fade-in-up relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-accent text-white px-6 py-2 rounded-full text-sm font-semibold">
+              <Card className="p-12 bg-gradient-to-br from-card to-accent/5 border-2 border-accent hover:shadow-2xl hover:border-accent/60 transition-all fade-in-up relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(197,160,101,0.08),transparent_70%)]" />
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
+                  <span className="bg-gradient-to-r from-accent to-accent/90 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
                     Рекомендуем
                   </span>
                 </div>
-                <div className="text-center mb-8">
+                <div className="text-center mb-8 relative z-10">
                   <h3 className="text-3xl font-bold mb-4 text-foreground">Премиум</h3>
                   <p className="text-muted-foreground mb-8">Личное сопровождение эксперта</p>
                   <div className="mb-8">
-                    <span className="text-5xl font-bold text-foreground">2 990 ₽</span>
+                    <span className="text-6xl font-bold bg-gradient-to-br from-accent via-accent/90 to-accent/70 bg-clip-text text-transparent">2 990 ₽</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-10">
@@ -506,8 +467,9 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
+      <section className="py-32 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_70%)]" />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Начните путь к спокойному купанию уже сегодня
@@ -518,7 +480,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              className="px-12 h-14 text-lg rounded-md"
+              className="px-12 h-16 text-lg rounded-md shadow-2xl hover:shadow-accent/20 hover:scale-105 transition-all"
             >
               Получить доступ к курсу
             </Button>
