@@ -146,8 +146,8 @@ const CourseContent = () => {
               </div>
               <div className="relative rounded-xl overflow-hidden shadow-xl ring-1 ring-accent/20 hover:shadow-2xl transition-all">
                 <img 
-                  src="https://cdn.poehali.dev/files/1111.jpg"
-                  alt="Мама с малышом в ванне"
+                  src="https://cdn.poehali.dev/files/photo_2026-01-10_20-32-51.jpg"
+                  alt="Занятие с инструктором"
                   className="w-full h-80 object-cover"
                 />
               </div>
