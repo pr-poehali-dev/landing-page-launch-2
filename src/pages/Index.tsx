@@ -17,17 +17,22 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="z-10 fade-in-up">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-foreground">
-                Домашнее купание: превратите рутину в SPA-ритуал для здоровья вашего малыша
+                Купание и уход<br />ЗА НОВОРОЖДЕННЫМ
               </h1>
-              <p className="text-lg md:text-xl mb-10 font-light text-muted-foreground leading-relaxed">
-                Авторская методика New Swim School. Мы научим вас не просто купать, а развивать ребенка через воду, укрепляя его иммунитет и нервную систему с первых дней жизни.
+              <p className="text-2xl md:text-3xl mb-10 font-light text-muted-foreground leading-relaxed">
+                4 способа купания без слез и боли в спине с максимальной пользой для развития ребенка
               </p>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-12 h-14 text-lg rounded-md"
-              >
-                Получить доступ к курсу
-              </Button>
+              <div className="space-y-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white px-12 h-14 text-lg rounded-md w-full md:w-auto"
+                >
+                  Получить доступ
+                </Button>
+                <p className="text-muted-foreground">
+                  старт сразу после оплаты
+                </p>
+              </div>
             </div>
             <div className="fade-in-up relative">
               <div className="rounded-lg overflow-hidden shadow-2xl">
@@ -141,13 +146,60 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Program / Syllabus */}
-      <section className="py-32 bg-background">
+      {/* For Whom Section */}
+      <section id="for-whom" className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Содержание уроков
+                Для кого этот курс?
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {[
+                {
+                  icon: "Baby",
+                  title: "Будущие родители",
+                  description: "Подготовьтесь к встрече с малышом и изучите все нюансы купания заранее"
+                },
+                {
+                  icon: "Users",
+                  title: "Молодые родители",
+                  description: "Освойте безопасные техники купания с первых дней жизни ребенка"
+                },
+                {
+                  icon: "Heart",
+                  title: "Семьи с малышами до 6 месяцев",
+                  description: "Превратите купание в развивающую процедуру для здоровья малыша"
+                },
+                {
+                  icon: "UserCheck",
+                  title: "Бабушки и дедушки",
+                  description: "Обновите знания и освойте современные методики ухода за новорожденными"
+                }
+              ].map((item, idx) => (
+                <Card key={idx} className="p-8 hover:shadow-lg transition-all">
+                  <div className="flex items-start gap-4">
+                    <Icon name={item.icon} size={32} className="text-accent flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                      <p className="text-muted-foreground">{item.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program / Syllabus */}
+      <section id="program" className="py-32 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-20 fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Программа курса
               </h2>
             </div>
 
@@ -323,12 +375,12 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 bg-background">
+      <section id="pricing" className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Выберите формат обучения
+                Выбрать тариф
               </h2>
             </div>
 
