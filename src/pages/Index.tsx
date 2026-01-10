@@ -204,6 +204,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pool Photo Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="fade-in-up relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-3xl opacity-40" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
+                <img 
+                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-50-26.jpg"
+                  alt="Занятие в бассейне с малышом"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Program / Syllabus */}
       <section id="program" className="py-32 bg-background">
         <div className="container mx-auto px-6">
