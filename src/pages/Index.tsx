@@ -18,20 +18,25 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="z-10 fade-in-up">
               <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
-                <span className="text-accent font-semibold text-sm tracking-wider uppercase">Premium Методика</span>
+                <span className="text-accent font-semibold text-sm tracking-wider uppercase">НОВАЯ ШКОЛА ГРУДНИЧКОВОГО ПЛАВАНИЯ</span>
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] text-foreground">
-                Домашнее купание: превратите рутину в <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/70">SPA-ритуал</span> для здоровья вашего малыша
+                Купание и уход<br />ЗА НОВОРОЖДЕННЫМ
               </h1>
-              <p className="text-lg md:text-xl mb-10 font-light text-muted-foreground leading-relaxed">
-                Авторская методика New Swim School. Мы научим вас не просто купать, а развивать ребенка через воду, укрепляя его иммунитет и нервную систему с первых дней жизни.
+              <p className="text-2xl md:text-3xl mb-10 font-light text-muted-foreground leading-relaxed">
+                4 способа купания без слез<br />и боли в спине<br />с максимальной пользой для развития ребенка
               </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-12 h-16 text-lg rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30"
-              >
-                Получить доступ к курсу
-              </Button>
+              <div className="space-y-3">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-12 h-16 text-lg rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30 w-full md:w-auto"
+                >
+                  Получить доступ
+                </Button>
+                <p className="text-muted-foreground text-center md:text-left">
+                  старт сразу после оплаты
+                </p>
+              </div>
             </div>
             <div className="fade-in-up relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-2xl opacity-50" />
@@ -47,47 +52,61 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Context Section - Empathy */}
+      {/* For Whom Section */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-20 fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground leading-tight">
-              Вы хотите дать ребенку лучшее,<br />но сталкиваетесь с вопросами:
+          <div className="max-w-4xl mx-auto text-center mb-16 fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Для кого?
             </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Для родителей, которые хотят, чтоб их ребёнок всесторонне развивался, крепко спал и любил купаться
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {[
               {
-                icon: "Shield",
-                title: "Безопасность",
-                description: "Как держать малыша так, чтобы не навредить хрупкой шее и позвоночнику?"
+                icon: "Baby",
+                title: "Новоиспеченные родители",
+                points: [
+                  "если Вы запутались в многочисленной информации на просторах интернета и устали от советов родственников, то этот курс расставит все точки над \"i\"",
+                  "если Вы не знаете где найти действительно ценную информацию о купании и уходе о новорождённом, этот курс станет Вашим маяком в мир счастливого и спокойного родительства"
+                ]
               },
               {
                 icon: "Heart",
-                title: "Эмоциональный фон",
-                description: "Почему вместо расслабления купание вызывает слезы и напряжение?"
+                title: "Будущие родители",
+                points: [
+                  "Если вы в ожидании своего малыша и хотите быть во всеоружии после его рождения, то этот курс точно для вас"
+                ]
               },
               {
-                icon: "Sparkles",
-                title: "Комфорт",
-                description: "Как организовать процесс, чтобы спина не уставала, а родители получали удовольствие от контакта?"
+                icon: "Users",
+                title: "Опытные родители",
+                points: [
+                  "для современных и осознанных родителей, которые берут на себя ответственность за здоровье своих детей",
+                  "для родителей, которым не нравится классическая школа грудничкового плавания, где ребёнка ныряют через стресс и мотыляют по воде"
+                ]
               }
-            ].map((problem, idx) => (
-              <div key={idx} className="text-center fade-in-up group" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 group-hover:border-accent/40 transition-all group-hover:scale-110">
-                  <Icon name={problem.icon} size={48} className="text-accent" strokeWidth={1} />
+            ].map((item, idx) => (
+              <Card key={idx} className="p-8 hover:shadow-2xl transition-all fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20">
+                    <Icon name={item.icon} size={28} className="text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground pt-2">{item.title}</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">{problem.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
-              </div>
+                <ul className="space-y-3">
+                  {item.points.map((point, pidx) => (
+                    <li key={pidx} className="flex items-start gap-3">
+                      <span className="text-accent mt-1 flex-shrink-0">•</span>
+                      <span className="text-muted-foreground leading-relaxed">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             ))}
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center fade-in-up">
-            <p className="text-lg italic text-muted-foreground leading-relaxed">
-              Мы знаем: ваша тревога — это проявление любви. Мы трансформируем её в уверенность.
-            </p>
           </div>
         </div>
       </section>
