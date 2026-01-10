@@ -9,10 +9,37 @@ import {
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex justify-center gap-4">
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('for-whom')}
+              className="text-foreground hover:text-accent"
+            >
+              Для кого?
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('program')}
+              className="text-foreground hover:text-accent"
+            >
+              Программа курса
+            </Button>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section - Split Layout */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-20 bg-gradient-to-br from-background via-background to-accent/5">
+      <section className="relative min-h-screen flex items-center overflow-hidden py-20 pt-32 bg-gradient-to-br from-background via-background to-accent/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(197,160,101,0.08),transparent_50%)]" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -20,10 +47,11 @@ const Index = () => {
               <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
                 <span className="text-accent font-semibold text-sm tracking-wider uppercase">НОВАЯ ШКОЛА ГРУДНИЧКОВОГО ПЛАВАНИЯ</span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] text-foreground">
-                Купание и уход<br />ЗА НОВОРОЖДЕННЫМ
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                <span className="text-foreground">Купание и уход</span><br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/70">ЗА НОВОРОЖДЕННЫМ</span>
               </h1>
-              <p className="text-2xl md:text-3xl mb-10 font-light text-muted-foreground leading-relaxed">
+              <p className="text-xl md:text-2xl mb-10 font-light text-muted-foreground leading-relaxed">
                 4 способа купания без слез<br />и боли в спине<br />с максимальной пользой для развития ребенка
               </p>
               <div className="space-y-3">
@@ -64,7 +92,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: "Baby",
@@ -90,18 +118,18 @@ const Index = () => {
                 ]
               }
             ].map((item, idx) => (
-              <Card key={idx} className="p-8 hover:shadow-2xl transition-all fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20">
-                    <Icon name={item.icon} size={28} className="text-accent" strokeWidth={1.5} />
+              <Card key={idx} className="p-6 hover:shadow-2xl transition-all fade-in-up bg-gradient-to-br from-card to-accent/5 border border-accent/20" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center border border-accent/30">
+                    <Icon name={item.icon} size={32} className="text-accent" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground pt-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {item.points.map((point, pidx) => (
-                    <li key={pidx} className="flex items-start gap-3">
-                      <span className="text-accent mt-1 flex-shrink-0">•</span>
-                      <span className="text-muted-foreground leading-relaxed">{point}</span>
+                    <li key={pidx} className="flex items-start gap-2">
+                      <span className="text-accent mt-1 flex-shrink-0 text-xs">•</span>
+                      <span className="text-muted-foreground leading-relaxed text-sm">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -363,9 +391,7 @@ const Index = () => {
                   "Техники умывания и подмывания",
                   "Рекомендации по налаживанию сна и режима",
                   "Безопасные позы для ношения малыша",
-                  "Обзор гаджетов для купания и развития",
-                  "Обучение в своем темпе",
-                  "Доступ навсегда"
+                  "Обзор гаджетов для купания и развития"
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
