@@ -139,24 +139,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Underwater Photo Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="fade-in-up relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl opacity-40" />
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
-                <img 
-                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-34-04.jpg"
-                  alt="Подводное плавание с малышом"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What You Learn Section */}
       <section className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
@@ -167,7 +149,7 @@ const Index = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
               {[
                 {
                   icon: "Droplets",
@@ -200,21 +182,21 @@ const Index = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Pool Photo Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="fade-in-up relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-3xl opacity-40" />
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
+            {/* Photo Gallery */}
+            <div className="grid md:grid-cols-2 gap-6 fade-in-up">
+              <div className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-accent/10">
+                <img 
+                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-34-04.jpg"
+                  alt="Подводное плавание с малышом"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-accent/10">
                 <img 
                   src="https://cdn.poehali.dev/files/photo_2026-01-10_19-50-26.jpg"
                   alt="Занятие в бассейне с малышом"
-                  className="w-full h-auto"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
