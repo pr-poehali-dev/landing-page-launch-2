@@ -111,58 +111,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Value Proposition */}
+      {/* What You Learn Section */}
       <section className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-20 items-center">
-              <div className="fade-in-up order-2 md:order-1 relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl blur-2xl" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/eb2b5335-af27-4996-a5c2-0995ea9019dc.jpg"
-                    alt="Ребенок в воде"
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <div className="fade-in-up order-1 md:order-2">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-                  Больше, чем просто гигиена
-                </h2>
-                <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-                  Ванна — это первая спортивная среда для грудничка. Правильные действия в воде закладывают фундамент будущего здоровья:
-                </p>
-                <div className="space-y-8">
-                  {[
-                    {
-                      icon: "Brain",
-                      title: "Интеллектуальное развитие",
-                      description: "Вода стимулирует нервные окончания, ускоряя развитие мозга."
-                    },
-                    {
-                      icon: "Moon",
-                      title: "Глубокий сон",
-                      description: "Снятие гипертонуса и мягкая нагрузка гарантируют спокойную ночь всей семье."
-                    },
-                    {
-                      icon: "Heart",
-                      title: "Эмоциональная связь",
-                      description: "Тактильный контакт «кожа к коже» формирует базовое доверие к миру и родителям."
-                    }
-                  ].map((value, idx) => (
-                    <div key={idx} className="flex gap-5 group">
-                      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20 group-hover:border-accent/40 transition-all">
-                        <Icon name={value.icon} size={28} className="text-accent" strokeWidth={1.5} />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-2 text-foreground">{value.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                      </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16 fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Что вы узнаете после просмотра видеоуроков
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  icon: "Droplets",
+                  title: "4 способа как купать своему ребенка в домашней ванне после родов"
+                },
+                {
+                  icon: "Hand",
+                  title: "Как правильно держать малыша при умывании и подмывании"
+                },
+                {
+                  icon: "Moon",
+                  title: "Узнаете как наладить сон и режим дня малыша"
+                },
+                {
+                  icon: "Baby",
+                  title: "Удобные и безопасные позы для ношения малыша"
+                },
+                {
+                  icon: "Blocks",
+                  title: "Гаджеты для купания и развития ребенка"
+                }
+              ].map((item, idx) => (
+                <Card key={idx} className="p-6 hover:shadow-xl transition-all fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20">
+                      <Icon name={item.icon} size={24} className="text-accent" strokeWidth={1.5} />
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <p className="text-foreground font-medium leading-relaxed pt-2">{item.title}</p>
+                  </div>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
@@ -355,81 +345,41 @@ const Index = () => {
       {/* Pricing Section */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-20 fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Выберите формат обучения
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Basic Plan */}
-              <Card className="p-12 bg-card border-border hover:shadow-xl hover:border-accent/20 transition-all fade-in-up relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/5 to-transparent rounded-bl-full" />
-                <div className="text-center mb-8 relative z-10">
-                  <h3 className="text-3xl font-bold mb-4 text-foreground">Базовый</h3>
-                  <p className="text-muted-foreground mb-8">Идеально для самостоятельного изучения</p>
-                  <div className="mb-8">
-                    <span className="text-6xl font-bold bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">1 490 ₽</span>
-                  </div>
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-12 bg-gradient-to-br from-card to-accent/5 border-2 border-accent hover:shadow-2xl transition-all fade-in-up relative overflow-hidden">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(197,160,101,0.08),transparent_70%)]" />
+              <div className="text-center mb-8 relative z-10">
+                <div className="mb-8">
+                  <span className="text-7xl font-bold bg-gradient-to-br from-accent via-accent/90 to-accent/70 bg-clip-text text-transparent">990 ₽</span>
                 </div>
-                <ul className="space-y-4 mb-10">
-                  {[
-                    "Полный доступ к видеоматериалам навсегда",
-                    "Гайд «Безопасная среда»",
-                    "Обучение в своем темпе"
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="w-full h-14 text-lg border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-md"
-                >
-                  Начать обучение
-                </Button>
-              </Card>
-
-              {/* Premium Plan */}
-              <Card className="p-12 bg-gradient-to-br from-card to-accent/5 border-2 border-accent hover:shadow-2xl hover:border-accent/60 transition-all fade-in-up relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(197,160,101,0.08),transparent_70%)]" />
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <span className="bg-gradient-to-r from-accent to-accent/90 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    Рекомендуем
-                  </span>
-                </div>
-                <div className="text-center mb-8 relative z-10">
-                  <h3 className="text-3xl font-bold mb-4 text-foreground">Премиум</h3>
-                  <p className="text-muted-foreground mb-8">Личное сопровождение эксперта</p>
-                  <div className="mb-8">
-                    <span className="text-6xl font-bold bg-gradient-to-br from-accent via-accent/90 to-accent/70 bg-clip-text text-transparent">2 990 ₽</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-10">
-                  {[
-                    "Всё из Базового тарифа",
-                    "Персональный чат с тренером (неделя поддержки)",
-                    "Анализ вашей техники (разбор видео ошибок)",
-                    "Индивидуальные рекомендации"
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  size="lg" 
-                  className="w-full h-14 text-lg bg-primary hover:bg-primary/90 text-white rounded-md"
-                >
-                  Получить сопровождение
-                </Button>
-              </Card>
-            </div>
+                <p className="text-xl text-muted-foreground">
+                  Доступ навсегда
+                </p>
+              </div>
+              <ul className="space-y-4 mb-10">
+                {[
+                  "Полный доступ ко всем видеоурокам",
+                  "4 способа купания без слез и боли в спине",
+                  "Техники умывания и подмывания",
+                  "Рекомендации по налаживанию сна и режима",
+                  "Безопасные позы для ношения малыша",
+                  "Обзор гаджетов для купания и развития",
+                  "Обучение в своем темпе",
+                  "Доступ навсегда"
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <span className="text-foreground text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button 
+                size="lg" 
+                className="w-full h-16 text-xl bg-primary hover:bg-primary/90 text-white rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30"
+              >
+                Купить доступ за 990 ₽
+              </Button>
+            </Card>
           </div>
         </div>
       </section>
