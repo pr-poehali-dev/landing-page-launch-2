@@ -70,7 +70,7 @@ const Index = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-2xl opacity-50" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/10">
                 <img 
-                  src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/eb2b5335-af27-4996-a5c2-0995ea9019dc.jpg"
+                  src="https://cdn.poehali.dev/files/1111.jpg"
                   alt="Мама с малышом в воде"
                   className="w-full h-auto"
                 />
@@ -135,6 +135,24 @@ const Index = () => {
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Underwater Photo Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="fade-in-up relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl opacity-40" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
+                <img 
+                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-34-04.jpg"
+                  alt="Подводное плавание с малышом"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
