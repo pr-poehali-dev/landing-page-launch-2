@@ -58,6 +58,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-12 h-16 text-lg rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30 w-full md:w-auto"
+                  onClick={() => window.open('https://t.me/AntonOchagov', '_blank')}
                 >
                   Получить доступ
                 </Button>
@@ -81,7 +82,7 @@ const Index = () => {
       </section>
 
       {/* For Whom Section */}
-      <section id="for-whom" className="py-32 bg-background">
+      <section id="for-whom" className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16 fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -140,7 +141,7 @@ const Index = () => {
       </section>
 
       {/* What You Learn Section */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16 fade-in-up">
@@ -149,7 +150,7 @@ const Index = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {[
                 {
                   icon: "Droplets",
@@ -183,7 +184,14 @@ const Index = () => {
               ))}
             </div>
 
-            {/* Photo Gallery */}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6 fade-in-up">
               <div className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-accent/10">
                 <img 
@@ -205,7 +213,7 @@ const Index = () => {
       </section>
 
       {/* Program / Syllabus */}
-      <section id="program" className="py-32 bg-background">
+      <section id="program" className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
@@ -272,7 +280,7 @@ const Index = () => {
       </section>
 
       {/* Authority Section */}
-      <section className="py-32 bg-muted/20">
+      <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-20 items-center">
@@ -321,7 +329,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
@@ -389,7 +397,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <Card className="p-12 bg-gradient-to-br from-card to-accent/5 border-2 border-accent hover:shadow-2xl transition-all fade-in-up relative overflow-hidden">
@@ -420,6 +428,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="w-full h-16 text-xl bg-primary hover:bg-primary/90 text-white rounded-md shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:shadow-primary/30"
+                onClick={() => window.open('https://t.me/AntonOchagov', '_blank')}
               >
                 Купить доступ за 990 ₽
               </Button>
@@ -429,7 +438,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16 fade-in-up">
