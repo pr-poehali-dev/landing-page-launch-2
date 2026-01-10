@@ -52,7 +52,7 @@ const Index = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/70">ЗА НОВОРОЖДЕННЫМ</span>
               </h1>
               <p className="text-xl md:text-2xl mb-10 font-light text-muted-foreground leading-relaxed">
-                4 способа купания без слез<br />и боли в спине<br />с максимальной пользой для развития ребенка
+                4 выхода купания без слез<br />и боли в спине<br />с максимальной пользой для развития ребенка
               </p>
               <div className="space-y-3">
                 <Button 
