@@ -62,7 +62,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl blur-2xl opacity-50" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/10">
                 <img 
-                  src="https://cdn.poehali.dev/files/1111.jpg"
+                  src="https://cdn.poehali.dev/files/photo_2026-01-10_20-32-51.jpg"
                   alt="Мама с малышом в воде"
                   className="w-full h-auto"
                 />
