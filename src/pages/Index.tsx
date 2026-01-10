@@ -47,7 +47,7 @@ const Index = () => {
               <div className="inline-block mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
                 <span className="text-accent font-semibold text-sm tracking-wider uppercase">НОВАЯ ШКОЛА ГРУДНИЧКОВОГО ПЛАВАНИЯ</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">Купание и уход</span><br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/70">ЗА НОВОРОЖДЕННЫМ</span>
               </h1>
@@ -81,7 +81,7 @@ const Index = () => {
       </section>
 
       {/* For Whom Section */}
-      <section className="py-32 bg-background">
+      <section id="for-whom" className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16 fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -187,7 +187,7 @@ const Index = () => {
       </section>
 
       {/* Program / Syllabus */}
-      <section className="py-32 bg-background">
+      <section id="program" className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
