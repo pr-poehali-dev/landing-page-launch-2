@@ -262,9 +262,9 @@ const Index = () => {
                 <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-2xl" />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-accent/20">
                   <img 
-                    src="https://cdn.poehali.dev/projects/6527fc28-0374-4562-a8e5-e13da8e59449/files/a016cb48-2de6-4e79-aeee-9c2a29ac8317.jpg" 
-                    alt="Эксперт New Swim School"
-                    className="w-full"
+                    src="https://cdn.poehali.dev/files/photo_2026-01-10_19-33-54.jpg" 
+                    alt="Алина Шаталова - автор курса"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
