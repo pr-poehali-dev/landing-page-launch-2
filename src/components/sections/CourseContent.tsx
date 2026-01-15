@@ -11,9 +11,9 @@ const CourseContent = () => {
   return (
     <>
       {/* For Whom Section */}
-      <section id="for-whom" className="py-16 bg-background">
+      <section id="for-whom" className="py-12 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16 fade-in-up">
+          <div className="max-w-4xl mx-auto text-center mb-10 fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Для кого?
             </h2>
@@ -53,13 +53,13 @@ const CourseContent = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center border border-accent/30">
                     <Icon name={item.icon} size={32} className="text-accent" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {item.points.map((point, pidx) => (
                     <li key={pidx} className="flex items-start gap-2">
-                      <span className="text-accent mt-1 flex-shrink-0 text-xs">•</span>
-                      <span className="text-muted-foreground leading-relaxed text-sm">{point}</span>
+                      <span className="text-accent mt-1 flex-shrink-0 text-base">•</span>
+                      <span className="text-muted-foreground leading-relaxed text-base">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -70,16 +70,16 @@ const CourseContent = () => {
       </section>
 
       {/* What You Learn Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16 fade-in-up">
+            <div className="text-center mb-10 fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                 Что вы узнаете после просмотра видеоуроков
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   icon: "Droplets",
@@ -107,7 +107,7 @@ const CourseContent = () => {
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center border border-accent/20">
                       <Icon name={item.icon} size={24} className="text-accent" strokeWidth={1.5} />
                     </div>
-                    <p className="text-foreground font-medium leading-relaxed pt-2">{item.title}</p>
+                    <p className="text-foreground font-medium leading-relaxed pt-2 text-lg">{item.title}</p>
                   </div>
                 </Card>
               ))}
@@ -117,7 +117,7 @@ const CourseContent = () => {
       </section>
 
       {/* Program / Syllabus */}
-      <section id="program" className="py-16 bg-background">
+      <section id="program" className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 fade-in-up">
