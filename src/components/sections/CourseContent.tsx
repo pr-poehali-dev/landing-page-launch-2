@@ -116,53 +116,6 @@ const CourseContent = () => {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-                Наши занятия
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Смотрите, как проходят занятия с малышами
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 fade-in-up">
-              <div className="md:col-span-2 relative rounded-xl overflow-hidden shadow-xl ring-1 ring-accent/20 hover:shadow-2xl transition-all">
-                <img 
-                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-34-04.jpg"
-                  alt="Подводное плавание с малышом"
-                  className="w-full h-80 object-cover"
-                />
-              </div>
-              <div className="relative rounded-xl overflow-hidden shadow-xl ring-1 ring-accent/20 hover:shadow-2xl transition-all">
-                <img 
-                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-50-26.jpg"
-                  alt="Занятие в бассейне"
-                  className="w-full h-80 object-cover"
-                />
-              </div>
-              <div className="relative rounded-xl overflow-hidden shadow-xl ring-1 ring-accent/20 hover:shadow-2xl transition-all">
-                <img 
-                  src="https://cdn.poehali.dev/files/photo_2026-01-10_20-32-51.jpg"
-                  alt="Занятие с инструктором"
-                  className="w-full h-80 object-cover"
-                />
-              </div>
-              <div className="md:col-span-2 relative rounded-xl overflow-hidden shadow-xl ring-1 ring-accent/20 hover:shadow-2xl transition-all">
-                <img 
-                  src="https://cdn.poehali.dev/files/photo_2026-01-10_19-34-20.jpg"
-                  alt="Обучение родителей"
-                  className="w-full h-80 object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Program / Syllabus */}
       <section id="program" className="py-16 bg-background">
         <div className="container mx-auto px-6">
