@@ -103,7 +103,7 @@ const PricingAndFAQ = () => {
       <footer className="py-12 bg-background border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center text-muted-foreground">
-            <p className="mb-2">© 2024 New Swim School. Все права защищены.</p>
+            <p className="mb-2">© 2026 New Swim School. Все права защищены.</p>
             <p className="text-sm">Курс разработан профессиональным инструктором грудничкового плавания</p>
           </div>
         </div>
